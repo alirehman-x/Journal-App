@@ -2,7 +2,7 @@ from datetime import datetime
 from pathlib import Path
 
 
-logs_directory = Path("D:/Docs/Code/Python/Logs")
+logs_directory = Path.home() / "Documents"/ "Logs"
 logs_directory.mkdir(parents=True, exist_ok=True)
 
 
