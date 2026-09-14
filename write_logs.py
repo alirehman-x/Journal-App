@@ -16,8 +16,4 @@ def write():
     with open(entry_filepath, "w") as entry_file:
         entry_file.write(entry_content)
     
-    print(f"Journal entry with file name [{entry_filename}] created successfully")  
-
-
-if __name__ == "__main__":
-    write()
+    print(f"Journal entry with file name [{entry_filename}] created successfully")
