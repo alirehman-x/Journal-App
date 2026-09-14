@@ -37,6 +37,3 @@ def update():
             print("Invalid choice. Try again later.")
     except ValueError:
         print("Invalid input. Please enter a number.")
-
-
-update()
