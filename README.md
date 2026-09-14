@@ -1,12 +1,13 @@
 # Journal App
 
-A simple Python-based command-line journal application for writing and reading personal journal entries.
+A simple Python-based command-line journal application for writing, reading, and updating personal journal entries.
 
 ## Overview
 
 Journal App is a lightweight tool that allows you to:
 - **Write** new journal entries with automatic timestamps
 - **Read** previously written entries in a user-friendly interface
+- **Update** existing journal entries
 
 Each entry is saved as a text file with a timestamp in the filename, making it easy to organize and find past entries.
 
@@ -14,6 +15,7 @@ Each entry is saved as a text file with a timestamp in the filename, making it e
 
 - ✍️ **Write Entries**: Quickly write what's on your mind with automatic date and time stamping
 - 📖 **Read Entries**: Browse and view all previously written journal entries
+- ✏️ **Update Entries**: Edit and update existing journal entries
 - 📁 **Organized Storage**: Entries are stored in a dedicated directory with timestamp-based filenames
 - 🖥️ **Simple CLI Interface**: Easy-to-use command-line interface
 
@@ -23,6 +25,7 @@ Each entry is saved as a text file with a timestamp in the filename, making it e
 Journal-App/
 ├── writeLogs.py      # Module for creating new journal entries
 ├── readLogs.py       # Module for reading existing journal entries
+├── updateLogs.py     # Module for updating existing journal entries
 ├── .gitignore        # Git ignore rules for Python projects
 └── README.md         # Project documentation
 ```
@@ -42,6 +45,13 @@ Handles reading and displaying journal entries.
 - User selects an entry by number to read its content
 - Displays the full content of the selected entry
 - Includes error handling for invalid inputs
+
+### `updateLogs.py`
+Handles updating existing journal entries.
+- Displays a list of all available entries
+- User selects an entry by number to edit
+- Allows modification of selected entry content
+- Saves changes to the same timestamped file
 
 ## Usage
 
@@ -76,6 +86,15 @@ Enter the file number you want to open:
 
 Enter the number of the entry you want to read.
 
+### Updating Journal Entries
+
+Run the update module:
+```bash
+python updateLogs.py
+```
+
+A list of all entries will be displayed. Select an entry number to edit it, make your changes, and the entry will be updated.
+
 ## Configuration
 
 The default logs directory is set to `D:/Docs/Code/Python/Logs`. To change this, modify the `targetDirectory` variable in `writeLogs.py`:
@@ -91,7 +110,6 @@ targetDirectory = Path("your/custom/path/here")
 
 ## Future Enhancements
 
-- [ ] Add edit functionality for existing entries
 - [ ] Add delete functionality for entries
 - [ ] Add search/filter capabilities
 - [ ] Add tags or categories for entries
